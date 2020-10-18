@@ -6,9 +6,8 @@ export function statement(invoice, plays){
 		totalAmount += amountFor(perf);
 	}
 
-	let volumeCredits = totalVolumeCredits();
 	result += `Amount owed is ${usd(totalAmount)}\n`;
-	result += `You earnde ${volumeCredits} credits\n`;
+	result += `You earnde ${totalVolumeCredits()} credits\n`;
 	return result;
 
 	function amountFor(aPerformance){
